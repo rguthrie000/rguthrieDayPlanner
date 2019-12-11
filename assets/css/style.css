@@ -1,0 +1,134 @@
+/* rguthrie's Day Planner - CSS
+
+The Day Planner is organized as a set of rows, where each
+is an hour of the work day. The rows are stacked.
+Each row has a column for the hour of the day, a next column
+for free-text entry of planned events, and a last column which
+is a save button for that hour.
+
+These rows are organized in the HTML as rows with no content, 
+with nested elements for the hour, text entry, and button areas.
+The rows are position:relative so that the column elements can
+be position:absolute to have assigned positions on the row.
+*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* standard yellow pill logo for all rguthrie sites */
+#nameBox {
+    position: relative;
+    width: 250px;
+    height: 100px;
+    padding: 15px;
+    margin: 10px 0 20px 200px;
+    text-align: center;
+    background: yellow;
+    color: black;
+    border-radius: 100px;
+    border: solid 1px black;
+}
+
+/* Today's date and time as a header label */
+#currentDay {
+    position: absolute;
+    top: 34px;
+    left: 275px;
+    width: 240px;
+    height: 30px;
+    padding: 7px;
+    margin: 0 0 0 0;
+    text-align: center;
+    background: lightblue;
+    color: black;
+    font-size: 1rem;
+    font-weight: 750;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+/* the row height is used by the column elements.
+this is a bootstrap class.*/
+.row {
+  position: relative;
+  height: 62px;       /*CHANGE THE ROW HEIGHT HERE*/
+  margin: 0 0 0 0;
+}
+
+/* hour of the day is the first column */
+.hour {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100px;
+  padding: 32px 0 0 30px;
+  margin: 0 0 0 0;
+  font-weight: 750;
+  background-color: white;
+  color: #000000;
+  border-right: 1px solid #000000;
+}
+
+/* the text area allows planned events to be edited.
+this area also shows the past as gray, the present
+as red (do it now!) and the future is green (not a
+crisis yet!). */
+textarea {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  height: 100%;
+  width: 600px;
+  padding: 0 0 0 10px;
+  margin: 0 0 0 0;
+  background: transparent;
+  border: none;
+  resize: none;
+  color: black;
+  line-height: 20px;
+  border-top: 1px solid black;
+}
+textarea.past {
+  background-color: #d3d3d3;
+  color: black;
+}
+textarea.present {
+  background-color: #ff6961;
+  color: black;
+}
+textarea.future {
+  background-color: #77dd77;
+  color: black;
+}
+
+/* large button with hover and click animation. */
+.saveBtn {
+  position: absolute;
+  top: 0;
+  left: 700px;
+  height: 100%;
+  width: 100px;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  font-size: 1.5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #06AED5;
+  color: white;
+}
+.saveBtn:hover {
+  font-size: 3rem;
+  background-color: blue;
+  transition: all .3s ease-in-out;
+}
+.saveBtn:active {
+  font-size: 3rem;
+  background-color: gray;
+  transform: translateY(4px);
+}
+

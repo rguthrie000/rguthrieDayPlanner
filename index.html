@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <title>Work Day Scheduler</title>
+</head>
+<body>
+    <section id="nameBox">
+        <h5>rguthrie's</h5>
+        <h4>Day Planner</h4>
+        <div>
+            <p id="currentDay" class="lead">(today's date)</p>
+        </div>
+    </section>
+
+    <!-- bootstrap grid, but only rows are defined.
+    columns are position-controlled by the CSS. -->
+    <div class="container">
+        <div class="row">
+            <p class="hour">0800</p>
+            <textarea id="t8"></textarea>
+            <!-- <input type="text" id="t8"/> -->
+            <button class="saveBtn" value="8">&#128190</button>
+        </div>
+
+        <!-- a row for each hour. the id and value assignments 
+        for textareas and buttons are used by the javascript. -->
+
+        <div class="row">
+            <p class="hour">0900</p>
+            <textarea id="t9"></textarea>
+            <!-- <input type="text" id="t9"/> -->
+            <button class="saveBtn" value="9">&#128190</button>
+        </div>
+
+        <div class="row">
+            <p class="hour">1000</p>
+            <textarea id="t10"></textarea>
+            <!-- <input type="text" id="t10"/> -->
+            <button class="saveBtn" value="10">&#128190</button>
+        </div>
+
+        <div class="row">
+            <p class="hour">1100</p>
+            <textarea id="t11"></textarea>
+            <!-- <input type="text" id="t11"/> -->
+            <button class="saveBtn" value="11">&#128190</button>
+        </div>
+
+        <div class="row">
+            <p class="hour">1200</p>
+            <textarea id="t12"></textarea>
+            <!-- <input type="text" id="t12"/> -->
+            <button class="saveBtn" value="12">&#128190</button>
+        </div>
+
+        <div class="row">
+            <p class="hour">1300<p>
+            <textarea id="t13"></textarea>
+            <!-- <input type="text" id="t13"/> -->
+            <button class="saveBtn" value="13">&#128190</button>
+        </div>
+
+        <div class="row">
+            <p class="hour">1400</p>
+            <textarea id="t14"></textarea>
+            <!-- <input type="text" id="t14"/> -->
+            <button class="saveBtn" value="14">&#128190</button>
+        </div>
+
+        <div class="row">
+            <p class="hour">1500</p>
+            <textarea id="t15"></textarea>
+            <!-- <input type="text" id="t15"/> -->
+            <button class="saveBtn" value="15">&#128190</button>
+        </div>
+
+        <div class="row">
+            <p class="hour">1600</p>
+            <textarea id="t16"></textarea>
+            <!-- <input type="text" id="t16"/> -->
+            <button class="saveBtn" value="16">&#128190</button>
+        </div>
+
+        <div class="row">
+            <p class="hour">1700</p>
+            <textarea id="t17"></textarea>
+            <!-- <input type="text" id="t17"/> -->
+            <button class="saveBtn" value="17">&#128190</button>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/moment.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
